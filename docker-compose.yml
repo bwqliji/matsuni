@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMIN_IDS=${ADMIN_IDS}
+      - GOOGLE_SHEET_ID=${GOOGLE_SHEET_ID}
+    restart: always

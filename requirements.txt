@@ -1,0 +1,32 @@
+# Telegram Bot (новые версии для Python 3.13)
+python-telegram-bot==21.7  # Последняя версия
+python-telegram-bot[job-queue]==21.7
+
+# Google Sheets
+gspread==6.0.2  # Обновленная версия
+google-auth==2.28.2
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+
+# Image Processing
+pytesseract==0.3.13
+Pillow==10.3.0  # Последняя версия, совместимая с Python 3.13
+opencv-python-headless==4.10.0.84  # Новая версия для Python 3.13
+numpy==2.0.0  # ОБЯЗАТЕЛЬНО 2.0.0 для Python 3.13
+
+# Web Panel
+Flask==3.0.3  # Flask 3.x для Python 3.13
+Flask-CORS==4.0.0
+Flask-Limiter==4.0.0
+
+# Utilities
+python-dotenv==1.0.1
+pandas==2.2.2  # Последняя версия для Python 3.13
+pytz==2024.1
+emoji==2.11.0
+cachetools==5.3.3
+
+# ДОБАВИТЬ ЭТИ СТРОКИ (обязательно):
+setuptools==70.0.0  # Решает проблему с установкой
+wheel==0.43.0
+Cython==3.0.10  # Нужен для сборки некоторых пакетов

@@ -1,0 +1,28 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+# Устанавливаем системные зависимости
+RUN apt-get update && apt-get install -y \
+    tesseract-ocr \
+    tesseract-ocr-rus \
+    poppler-utils \
+    libgl1-mesa-glx \
+    gcc \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Копируем зависимости
+COPY requirements.txt .
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Копируем код
+COPY . .
+
+# Создаем пользователя
+RUN useradd -m -u 1000 botuser && chown -R botuser:botuser /app
+USER botuser
+
+# Запускаем
+CMD ["python", "-m", "bot.main"]

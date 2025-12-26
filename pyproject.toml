@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=70.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "matsuni-bot"
+version = "1.0.0"
+requires-python = ">=3.13"
+dependencies = [
+    "python-telegram-bot==21.7",
+    "gspread==6.0.2",
+    "google-auth==2.28.2",
+    "pytesseract==0.3.13",
+    "Pillow==10.3.0",
+    "opencv-python-headless==4.10.0.84",
+    "numpy==2.0.0",
+    "Flask==3.0.3",
+    "pandas==2.2.2",
+]
